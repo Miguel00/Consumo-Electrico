@@ -1,0 +1,50 @@
+<div class="row text-center">
+  <div class="col-sm-4 text-center">
+      <h4>Electricidad</h4>
+      <div style="display: block">
+        <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+  </div>
+  <div class="col-sm-4 text-center">
+      <h4>Coste</h4>
+      <div style="display: block">
+        <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+  </div>
+  <div class="col-sm-4">
+      <h4>CO2</h4>
+      <div style="display: block">
+        <canvas baseChart
+                [data]="pieChartData"
+                [labels]="pieChartLabels"
+                [chartType]="pieChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+      </div>
+  </div>
+</div>
+<div class="row">
+  <h1 class="text-center bold">Total diario</h1>
+  <div class="col-sm-4 text-center">
+      <h3>Electricidad</h3>
+      <h2>11.56 kWh</h2>
+  </div>
+  <div class="col-sm-4 text-center">
+      <h3>Coste</h3>
+      <h2>1.97 $</h2>
+  </div>
+  <div class="col-sm-4 text-center">
+      <h3>CO2</h3>
+      <h2>5.78 kg</h2>
+  </div>
+</div>

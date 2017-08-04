@@ -30,16 +30,11 @@
                     routerLink="/proyects"
                 title="Cursos">Proyectos</a>
               </li>
-              <!-- <li class="leaf">
-                <a
-                  *ngIf="_authService.isLoggedIn()" 
-                  routerLink="/issues" 
-                  title="Iniciar sesión">Issues</a>
-              </li> -->
-              <li class="leaf" *ngIf="_authService.isLoggedIn()">
-                <a title="Cerrar sesión" >Historico</a>
+              <li class="leaf">
+                  <a *ngIf="_authService.isLoggedIn()" 
+                    routerLink="/historico">Historico</a>
               </li>
-              <li class="leaf" *ngIf="_authService.isLoggedIn()">
+              <li class="leaf" *ngIf="_authService.isLoggedIn()" >
                 <a title="Cerrar sesión" >Gestion</a>
               </li>
               <li class="leaf" *ngIf="_authService.isLoggedIn()">

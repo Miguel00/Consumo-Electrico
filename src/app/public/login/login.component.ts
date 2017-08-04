@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   constructor(public _authService: AuthenticationService,
               public _locker: SessionStorageService,
               public _router: Router ) { }
-
+    
   ngOnInit() {
   }
   onSubmit(event: Event) {

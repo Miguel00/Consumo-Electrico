@@ -4,7 +4,8 @@ import { HomeComponent } from './auth/home/home.component';
 import { ProjectListComponent } from './auth/project-list/project-list.component';
 import { PublicGuard } from './common/guards/public.guard';
 import { AuthGuard } from './common/guards/auth.guard';
-import { NotFoundComponent } from './common/not-found/not-found.component'
+import { NotFoundComponent } from './common/not-found/not-found.component';
+import { HistoricoComponent } from './auth/historico/historico.component'
 
 export const routes: Routes =[
     {
@@ -20,6 +21,10 @@ export const routes: Routes =[
         path: 'proyects', component: ProjectListComponent, canActivate: [AuthGuard]
     },
     {
+        path: 'historico', component: HistoricoComponent, canActivate: [AuthGuard]
+    },
+    {
         path: '**', component: NotFoundComponent
-    }
+    },  
+    
 ];

@@ -21,6 +21,10 @@ import { AuthGuard } from './common/guards/auth.guard';
 import { PublicGuard } from './common/guards/public.guard';
 import { NotFoundComponent } from './common/not-found/not-found.component';
 
+import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { HistoricoComponent } from './auth/historico/historico.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,16 +33,20 @@ import { NotFoundComponent } from './common/not-found/not-found.component';
     LoaderComponent,
     LoginComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HistoricoComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(routes),
     Ng2Webstorage,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [ProjectListService,AuthenticationService,HttpService,AuthGuard,PublicGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
