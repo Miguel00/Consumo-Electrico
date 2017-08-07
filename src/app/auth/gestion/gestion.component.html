@@ -1,0 +1,57 @@
+<div class="row text-center">
+  <div class="col-sm-12">
+    <ul class="nav nav-tabs nav-justified margin-bottom-30"> 
+      <li role="presentation" class="active"><a href="#.">Diario</a></li> 
+      <li role="presentation"><a (click)="onChangeSemanal()">Semanal</a></li> 
+      <li role="presentation"><a href="#.">Mensual</a></li> 
+    </ul>
+  </div>
+  <div class="col-sm-4 text-center">
+      <div style="display: block">
+  <canvas baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+  </div>
+  <div class="col-sm-4 text-center">
+      <div style="display: block">
+  <canvas baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+  </div>
+  <div class="col-sm-4">
+      <div style="display: block">
+  <canvas baseChart
+          [data]="polarAreaChartData"
+          [labels]="polarAreaChartLabels"
+          [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+</div>
+  </div>
+</div>
+<div class="row">
+  <h1 class="text-center bold">Total diario</h1>
+  <div class="col-sm-4 text-center">
+      <h3>Electricidad</h3>
+      <h2>11.56 kWh</h2>
+  </div>
+  <div class="col-sm-4 text-center">
+      <h3>Coste</h3>
+      <h2>1.97 $</h2>
+  </div>
+  <div class="col-sm-4 text-center">
+      <h3>CO2</h3>
+      <h2>5.78 kg</h2>
+  </div>
+</div>

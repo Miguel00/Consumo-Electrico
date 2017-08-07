@@ -6,6 +6,7 @@ import { PublicGuard } from './common/guards/public.guard';
 import { AuthGuard } from './common/guards/auth.guard';
 import { NotFoundComponent } from './common/not-found/not-found.component';
 import { HistoricoComponent } from './auth/historico/historico.component'
+import { GestionComponent } from './auth/gestion/gestion.component'
 
 export const routes: Routes =[
     {
@@ -22,6 +23,9 @@ export const routes: Routes =[
     },
     {
         path: 'historico', component: HistoricoComponent, canActivate: [AuthGuard]
+    },
+    {
+        path: 'gestion', component: GestionComponent, canActivate: [AuthGuard]
     },
     {
         path: '**', component: NotFoundComponent

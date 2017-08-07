@@ -35,7 +35,7 @@
                     routerLink="/historico">Historico</a>
               </li>
               <li class="leaf" *ngIf="_authService.isLoggedIn()" >
-                <a title="Cerrar sesión" >Gestion</a>
+                <a title="Cerrar sesión" routerLink="/gestion">Gestion</a>
               </li>
               <li class="leaf" *ngIf="_authService.isLoggedIn()">
                 <a title="Cerrar sesión" >Informe de energia</a>
