@@ -7,6 +7,7 @@ import { AuthGuard } from './common/guards/auth.guard';
 import { NotFoundComponent } from './common/not-found/not-found.component';
 import { HistoricoComponent } from './auth/historico/historico.component'
 import { GestionComponent } from './auth/gestion/gestion.component'
+import { InformeEnergiaComponent } from './common/informe-energia/informe-energia.component'
 
 export const routes: Routes =[
     {
@@ -26,6 +27,9 @@ export const routes: Routes =[
     },
     {
         path: 'gestion', component: GestionComponent, canActivate: [AuthGuard]
+    },
+    {
+        path: 'informe-energia', component: InformeEnergiaComponent, canActivate: [AuthGuard]
     },
     {
         path: '**', component: NotFoundComponent

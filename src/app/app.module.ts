@@ -24,6 +24,7 @@ import { NotFoundComponent } from './common/not-found/not-found.component';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { HistoricoComponent } from './auth/historico/historico.component';
 import { GestionComponent } from './auth/gestion/gestion.component';
+import { InformeEnergiaComponent } from './common/informe-energia/informe-energia.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { GestionComponent } from './auth/gestion/gestion.component';
     HomeComponent,
     NotFoundComponent,
     HistoricoComponent,
-    GestionComponent
+    GestionComponent,
+    InformeEnergiaComponent,
   ],
   imports: [
     BrowserModule,

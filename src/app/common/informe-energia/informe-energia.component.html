@@ -1,0 +1,81 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="container">
+      <div class="row margin-bottom-30">
+        <div class="col-sm-2">
+          <span>Tipo de informe</span>
+        </div>
+        <div class='col-sm-6'>
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                Informe de energia
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#">Informe diario</a></li>
+                <li><a href="#">Informe mensual</a></li>
+                <li><a href="#">Informe semanal</a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    <div class="row">
+        <div class="col-sm-2">
+          <span>Desde</span>
+        </div>
+        <div class='col-sm-3'>
+            <div class="form-group">
+                
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+          <div class="col-sm-1">
+            <p>Para</p>
+          </div>
+        <div class='col-sm-3'>
+            <div class="form-group">
+                
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+    <div class="row">
+      <div class="margin-bottom-30">
+        <div style="display: block ">
+          <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+          </div>
+          <button (click)="randomize()">Update</button>
+        </div>
+      </div>
+    <div class="col-sm-12 margin-bottom-30">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1"></span>
+        <input type="text" class="form-control" placeholder="E-mail" aria-describedby="basic-addon1">
+      </div>
+    </div>
+    <div class="col-sm-12 margin-bottom-30">
+      <div class="input-group">
+        <span class="input-group-addon" id="basic-addon1"></span>
+        <input type="text" style="height:450px;" class="form-control" placeholder="Mensaje" aria-describedby="basic-addon1">
+      </div>
+    </div>
+  </div>
+</div>
