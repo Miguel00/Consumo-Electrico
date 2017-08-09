@@ -41,7 +41,7 @@
                 <a title="Cerrar sesión" routerLink="/informe-energia">Informe de energia</a>
               </li>
               <li class="leaf" *ngIf="_authService.isLoggedIn()">
-                <a title="Cerrar sesión" >Resumen</a>
+                <a title="Cerrar sesión" routerLink="/resumen" >Resumen</a>
               </li>
               <li class="leaf" *ngIf="_authService.isLoggedIn()">
                 <a title="Cerrar sesión" (click)="logout()">Salir</a>

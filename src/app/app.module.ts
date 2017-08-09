@@ -25,6 +25,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { HistoricoComponent } from './auth/historico/historico.component';
 import { GestionComponent } from './auth/gestion/gestion.component';
 import { InformeEnergiaComponent } from './common/informe-energia/informe-energia.component';
+import { ResumenComponent } from './common/resumen/resumen.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { InformeEnergiaComponent } from './common/informe-energia/informe-energi
     HistoricoComponent,
     GestionComponent,
     InformeEnergiaComponent,
+    ResumenComponent,
   ],
   imports: [
     BrowserModule,
