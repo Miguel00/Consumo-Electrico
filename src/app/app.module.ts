@@ -27,6 +27,12 @@ import { GestionComponent } from './auth/gestion/gestion.component';
 import { InformeEnergiaComponent } from './common/informe-energia/informe-energia.component';
 import { ResumenComponent } from './common/resumen/resumen.component';
 
+import { NvD3Module } from 'ng2-nvd3';
+import 'nvd3';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DatePickerModule } from 'ng2-datepicker';
+
 
 @NgModule({
   declarations: [
@@ -48,7 +54,10 @@ import { ResumenComponent } from './common/resumen/resumen.component';
     RouterModule.forRoot(routes),
     Ng2Webstorage,
     FormsModule,
-    ChartsModule
+    ChartsModule,
+    NvD3Module,
+    NgbModule.forRoot(),
+    DatePickerModule,
   ],
   providers: [ProjectListService,AuthenticationService,HttpService,AuthGuard,PublicGuard],
   bootstrap: [AppComponent]

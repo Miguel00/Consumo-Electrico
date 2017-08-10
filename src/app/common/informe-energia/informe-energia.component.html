@@ -2,55 +2,48 @@
   <div class="col-sm-12">
     <div class="container">
       <div class="row margin-bottom-30">
-        <div class="col-sm-2">
-          <span>Tipo de informe</span>
+        <div class="col-sm-2 margin-top-17">
+          <span>Tipo de informe:</span>
         </div>
         <div class='col-sm-6'>
             <div class="dropdown">
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+               <!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                 Informe de energia
                 <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              </button> 
+               <ul class="dropdown-menu" (change)="mychange(event)" aria-labelledby="dropdownMenu1">
                 <li><a href="#">Informe diario</a></li>
                 <li><a href="#">Informe mensual</a></li>
                 <li><a href="#">Informe semanal</a></li>
-              </ul>
+              </ul>  -->
+              <select style="height: 40px;width: 120px;" class="btn btn-default dropdown-toggle" (change)="onChange($event.target.value)">
+                  <option *ngFor="let i of devices">{{i}}</option>
+              </select>
             </div>
         </div>
       </div>
-    <div class="row">
+    <div class="row margin-bottom-30">
         <div class="col-sm-2">
-          <span>Desde</span>
+          <span>Desde:</span>
         </div>
         <div class='col-sm-3'>
-            <div class="form-group">
-                
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
+            <ng2-datepicker [options]="from" [(ngModel)]="date"></ng2-datepicker>
         </div>
           <div class="col-sm-1">
-            <p>Para</p>
+            <p>Para:</p>
           </div>
         <div class='col-sm-3'>
-            <div class="form-group">
-                
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
+            <ng2-datepicker [options]="to" [(ngModel)]="date_to"></ng2-datepicker>
+        </div>
+        <div class="col-sm-1">
+          <button (click)="randomize()" class="btn btn-primary pull-right">
+            Graficar        
+          </button>
         </div>
     </div>
   </div>
-    <div class="row">
+    <div *ngIf="item == 'diario'">
+      <div class="row">
       <div class="margin-bottom-30">
         <div style="display: block ">
           <canvas baseChart
@@ -62,9 +55,28 @@
             (chartHover)="chartHovered($event)"
             (chartClick)="chartClicked($event)"></canvas>
           </div>
-          <button (click)="randomize()">Update</button>
         </div>
       </div>
+    </div> 
+    <div *ngIf="item == 'mes'">
+     <nvd3 [options]="options" [data]="data"></nvd3>
+    </div> 
+    <div *ngIf="item == 'año'">
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div style="display: block">
+          <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)">
+          </canvas>
+          </div>
+        </div>
+      </div>
+    </div>  
+
     <div class="col-sm-12 margin-bottom-30">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon1"></span>
@@ -74,7 +86,7 @@
     <div class="col-sm-12 margin-bottom-30">
       <div class="input-group">
         <span class="input-group-addon" id="basic-addon1"></span>
-        <input type="text" style="height:450px;" class="form-control" placeholder="Mensaje" aria-describedby="basic-addon1">
+        <input type="text" style="height:250px;" class="form-control" placeholder="Mensaje" aria-describedby="basic-addon1">
       </div>
     </div>
   </div>

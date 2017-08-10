@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatePickerOptions, DateModel } from 'ng2-datepicker';
 
 @Component({
   selector: 'app-informe-energia',
@@ -6,12 +7,100 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./informe-energia.component.css']
 })
 export class InformeEnergiaComponent implements OnInit {
+  model;
+  public devices;
+  public item;
+  date: DateModel;
+  date_to: DateModel;
+  from: DatePickerOptions;
+  to: DatePickerOptions;
 
-  constructor() { }
-
+  constructor() {
+    this.devices = ['diario','mes','año'];
+    this.item = this.devices[0];
+    this.from = new DatePickerOptions();
+    this.to = new DatePickerOptions();
+   }
+  options;
+  data ;
+  chartType;
   ngOnInit() {
+    this.options = {
+            chart: {
+                type: 'boxPlotChart',
+                height: 450,
+                margin : {
+                    top: 20,
+                    right: 20,
+                    bottom: 60,
+                    left: 40
+                },
+                color:['darkblue', 'darkorange', 'green', 'darkred', 'darkviolet'],
+                x: function(d){return d.label;},
+                // y: function(d){return d.values.Q3;},
+                maxBoxWidth: 75,
+                yDomain: [0, 500]
+            }
+        };
+    this.data = [
+            {
+                label: "Enero",
+                values: {
+                    Q1: 180,
+                    Q2: 200,
+                    Q3: 250,
+                    whisker_low: 115,
+                    whisker_high: 400,
+                    outliers: [50, 100, 425]
+                }
+            },
+            {
+                label: "Febrero",
+                values: {
+                    Q1: 300,
+                    Q2: 350,
+                    Q3: 400,
+                    whisker_low: 225,
+                    whisker_high: 425,
+                    outliers: [175, 450, 480]
+                }
+            },
+            {
+                label: "Marzo",
+                values: {
+                    Q1: 100,
+                    Q2: 200,
+                    Q3: 300,
+                    whisker_low: 25,
+                    whisker_high: 400,
+                    outliers: [450, 475]
+                }
+            },
+            {
+                label: "Abril",
+                values: {
+                    Q1: 75,
+                    Q2: 100,
+                    Q3: 125,
+                    whisker_low: 50,
+                    whisker_high: 300,
+                    outliers: [450]
+                }
+            },
+            {
+                label: "Mayo",
+                values: {
+                    Q1: 325,
+                    Q2: 400,
+                    Q3: 425,
+                    whisker_low: 225,
+                    whisker_high: 475,
+                    outliers: [50, 100, 200]
+                }
+            }
+        ];
   }
-
+  
   public barChartOptions:any = {
     scaleShowVerticalLines: false,
     responsive: true
@@ -54,4 +143,16 @@ export class InformeEnergiaComponent implements OnInit {
      * assign it;
      */
   }
+  onChange(deviceValue) {
+    console.log(deviceValue);
+    this.item = deviceValue;
+  }
+  //STARTDONUT
+    // Doughnut
+  public doughnutChartLabels:string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+  public doughnutChartData:number[] = [350, 450, 100];
+  public doughnutChartType:string = 'doughnut';
+  //ENDDONUT
+  
+
 }

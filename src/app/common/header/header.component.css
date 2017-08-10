@@ -1,0 +1,10 @@
+.font-family1{
+    font-family: "News Cycle","Arial Narrow Bold",sans-serif;
+}
+.color1{
+    color:#2BBBAD;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #2BBBAD;
+    background-color: #eeeeee;
+}

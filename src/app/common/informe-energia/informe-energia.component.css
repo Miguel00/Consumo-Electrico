@@ -1,3 +1,11 @@
 .margin-bottom-30{
     margin-bottom: 30px
 }
+.margin-top-17{
+        margin-top: 17px;
+}
+
+.btn {
+    padding: .11rem 1.01rem;
+    margin-top:0px;
+}

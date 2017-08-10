@@ -7,7 +7,7 @@
   <![endif]-->
 
   <nav class="navbar navbar-default webtraining-nav" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div class="navbar-header">
@@ -18,8 +18,8 @@
               <span class="icon-bar"></span>
             </button>
             <div id="logo" class="logo">
-              <a class="b-navbar-brand">
-                <i style="margin-top:20px;font-weight:bold;" class="fa fa-area-chart" aria-hidden="true"> Consumo Electrico</i>
+              <a class="b-navbar-brand color1">
+                <i style="margin-top:20px;font-weight:bold;" class="fa fa-area-chart" aria-hidden="true"><span class="font-family1"> CONSUMO ELECTRICO</span></i>
               </a>
             </div>
           </div>
@@ -28,7 +28,7 @@
               <li class="leaf" >
                 <a  *ngIf="_authService.isLoggedIn()"
                     routerLink="/proyects"
-                title="Cursos">Proyectos</a>
+                title="Cursos">Home</a>
               </li>
               <li class="leaf">
                   <a *ngIf="_authService.isLoggedIn()" 
