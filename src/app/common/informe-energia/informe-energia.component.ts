@@ -157,23 +157,23 @@ export class InformeEnergiaComponent implements OnInit {
   //ENDDONUT
   
   convert(){
-    var item = {
-        "Name" : "XYZ",
-        "Age" : "22",
-        "Gender" : "Male"
-      };
+
       let doc = new JSPdf();
-    //   var doc = new jsPDF('p', 'pt');
-      var col = ["Details", "Values"];
-      var rows = [];
-  
-      for(var key in item){
-          var temp = [key, item[key]];
-          rows.push(temp);
-      }
-  
-    //   doc.autoTable(col, rows);
-  
+      
+      doc.text(75, 20, 'CONSUMO ELECTRICO');
+      doc.text(20, 30, ' ');
+      doc.text(20, 30, 'CO2: 24.00 kg');
+
+      doc.text(20, 40, 'COSTE:  15.00 KG');
+      
+      doc.text(20, 50, 'HISTORICO: 80.00 KG');
+
+      doc.text(20, 60, 'INFORME TOTAL: 119.00 KG');
+      
+      doc.setFont("times");
+      doc.setFontType("normal");
+      doc.text(105, 80, 'Todos los derechos reversados', null, null, 'center');
+      doc.text(105, 90, 'Consumo electrico 2017', null, null, 'center');
       doc.save('Test.pdf');
   }
 }
