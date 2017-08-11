@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePickerOptions, DateModel } from 'ng2-datepicker';
 
+import * as JSPdf from 'jspdf'; 
+declare var jsPDF: any; // Important
 @Component({
   selector: 'app-informe-energia',
   templateUrl: './informe-energia.component.html',
@@ -35,7 +37,7 @@ export class InformeEnergiaComponent implements OnInit {
                     bottom: 60,
                     left: 40
                 },
-                color:['darkblue', 'darkorange', 'green', 'darkred', 'darkviolet'],
+                color:['black', '#9CFF33', '#3BDEFF', 'red', '#FCF33E'],
                 x: function(d){return d.label;},
                 // y: function(d){return d.values.Q3;},
                 maxBoxWidth: 75,
@@ -154,5 +156,24 @@ export class InformeEnergiaComponent implements OnInit {
   public doughnutChartType:string = 'doughnut';
   //ENDDONUT
   
-
+  convert(){
+    var item = {
+        "Name" : "XYZ",
+        "Age" : "22",
+        "Gender" : "Male"
+      };
+      let doc = new JSPdf();
+    //   var doc = new jsPDF('p', 'pt');
+      var col = ["Details", "Values"];
+      var rows = [];
+  
+      for(var key in item){
+          var temp = [key, item[key]];
+          rows.push(temp);
+      }
+  
+    //   doc.autoTable(col, rows);
+  
+      doc.save('Test.pdf');
+  }
 }
