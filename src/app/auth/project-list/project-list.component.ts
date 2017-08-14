@@ -11,7 +11,10 @@ import { Http,RequestOptions,Headers} from '@angular/http';
 export class ProjectListComponent implements OnInit {
   isLoading = true;
   projects: Array<Project>;
-  constructor(private _projectListService: ProjectListService,private _http: Http) { }
+  public itemsTarifa;
+  constructor(private _projectListService: ProjectListService,private _http: Http) {
+    this.itemsTarifa = ['','',''];
+  }
 
   ngOnInit() {
     this.getAllProjects();
@@ -90,5 +93,17 @@ export class ProjectListComponent implements OnInit {
     },err=>{
       console.log(err)
     }); 
+  }
+  itemTarifa(){
+    this.itemsTarifa = ['Miami','New York','Julio'];
+  }
+  heroes = [];
+  addHero(newHero1: string,newHero2: string,newHero3: string) {
+    if (newHero1 && newHero2 && newHero3) {
+      this.heroes.push(newHero1);
+      this.heroes.push(newHero2);
+      this.heroes.push(newHero3);
+      
+    }
   }
 }
