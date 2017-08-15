@@ -172,7 +172,7 @@ export class InformeEnergiaComponent implements OnInit {
       
       doc.setFont("times");
       doc.setFontType("normal");
-      doc.text(105, 80, 'Todos los derechos reversados', null, null, 'center');
+      doc.text(105, 80, 'Todos los derechos reservados', null, null, 'center');
       doc.text(105, 90, 'Consumo electrico 2017', null, null, 'center');
       doc.save('ConsumoElectrico.pdf');
   }

@@ -1,4 +1,3 @@
-
 <div *ngIf="isLoading; else elseBlock">
   <div class="auth-loader-container">
     <app-loader></app-loader>
@@ -31,25 +30,25 @@
     <div class="col-sm-3">
         <input #newHero1
         (keyup.enter)="addHero(newHero1.value)"
-        (blur)="addHero(newHero1.value); newHero.value='' "   type="text" class="form-control" placeholder="Ciudad" aria-label="Username" aria-describedby="basic-addon1">
+        type="text" class="form-control" placeholder="Ciudad" aria-label="Username" aria-describedby="basic-addon1">
     </div>   
     <div class="col-sm-3">
         <input #newHero2
         (keyup.enter)="addHero(newHero2.value)"
-        (blur)="addHero(newHero2.value); newHero.value='' " type="text" class="form-control" placeholder="Region" aria-label="Username" aria-describedby="basic-addon1">
+        type="text" class="form-control" placeholder="Region" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="col-sm-3">
         <input #newHero3
         (keyup.enter)="addHero(newHero3.value)"
-        (blur)="addHero(newHero3.value); newHero.value='' " type="text" class="form-control" placeholder="Mes" aria-label="Username" aria-describedby="basic-addon1">
+        type="text" class="form-control" placeholder="Mes" aria-label="Username" aria-describedby="basic-addon1">
     </div>
     <div class="col-sm-3">
         <button (click)="addHero(newHero1.value,newHero2.value,newHero3.value)" class="btn btn-primary pull-right">
             Agregar tarifa      
         </button>
-    </div>
-    
+    </div>  
   </div> 
+  
   <div class="row">
       <div class="col-sm-12 margin-bottom-60">
           <div *ngFor="let hero of heroes" class="col-sm-3">
