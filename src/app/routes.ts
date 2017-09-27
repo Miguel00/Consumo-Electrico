@@ -12,28 +12,28 @@ import { ResumenComponent } from './common/resumen/resumen.component';
 
 export const routes: Routes =[
     {
-        path: '', pathMatch: 'full', redirectTo : '/login'
+        path: '', pathMatch: 'full', redirectTo : '/home'
     },
     {
-        path: 'login', component: LoginComponent, pathMatch: 'full', canActivate: [PublicGuard]
+        path: 'login', component: LoginComponent, pathMatch: 'full', 
     },
     {
-        path: 'home', component: HomeComponent, canActivate: [AuthGuard]
+        path: 'home', component: HomeComponent, 
     },
     {
-        path: 'proyects', component: ProjectListComponent, canActivate: [AuthGuard]
+        path: 'proyects', component: ProjectListComponent, 
     },
     {
-        path: 'historico', component: HistoricoComponent, canActivate: [AuthGuard]
+        path: 'historico', component: HistoricoComponent, 
     },
     {
-        path: 'gestion', component: GestionComponent, canActivate: [AuthGuard]
+        path: 'gestion', component: GestionComponent, 
     },
     {
-        path: 'informe-energia', component: InformeEnergiaComponent, canActivate: [AuthGuard]
+        path: 'informe-energia', component: InformeEnergiaComponent, 
     },
     {
-        path: 'resumen', component: ResumenComponent, canActivate: [AuthGuard]
+        path: 'resumen', component: ResumenComponent, 
     },
     {
         path: '**', component: NotFoundComponent

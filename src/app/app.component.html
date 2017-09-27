@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-2 hidden-xs">
-            <ul class="nav nav-pills nav-stacked text-center" *ngIf="_authService.isLoggedIn()">
+            <ul class="nav nav-pills nav-stacked text-center">
                 <li  role="presentation" class="active text-center"><a href="#"><span class="glyphicon glyphicon-home text-center" aria-hidden="true"></span></a></li>
                 <li  role="presentation"><a class="color2 navbar" href="#">Dias</a></li>
                 <li  role="presentation"><a class="color2 navbar" href="#">Gestion</a></li>
@@ -14,7 +14,7 @@
                 <li  role="presentation"><a class="color2 navbar" href="#">Coste</a></li>
             </ul>
             <!-- <div class="bs-example" data-example-id="simple-nav-stacked"> <ul class="nav nav-pills nav-stacked nav-pills-stacked-example">  <li role="presentation"><a href="#">Profile</a></li> <li role="presentation"><a href="#">Messages</a></li> </ul> </div> -->
-            <div class="row margin-bottom-30" *ngIf="_authService.isLoggedIn()">
+            <div class="row margin-bottom-30">
                 <div class="col-sm-12 text-center">
                     <p>Tu objetivo</p>
                 </div>
@@ -27,7 +27,7 @@
             </div>
             <div id="text-carousel" class="carousel slide" data-ride="carousel">
             <!-- Wrapper for slides -->
-            <div class="row" *ngIf="_authService.isLoggedIn()">
+            <div class="row">
                 <div class="col-sm-12">
                     <div class="carousel-inner">
                         <div class="item active">

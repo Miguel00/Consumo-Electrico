@@ -9,7 +9,7 @@ import { Http,RequestOptions,Headers} from '@angular/http';
   styleUrls: ['./project-list.component.css']
 })
 export class ProjectListComponent implements OnInit {
-  isLoading = true;
+  isLoading = false;
   projects: Array<Project>;
   public itemsTarifa;
   constructor(private _projectListService: ProjectListService,private _http: Http) {
@@ -97,13 +97,6 @@ export class ProjectListComponent implements OnInit {
   itemTarifa(){
     this.itemsTarifa = ['Miami','New York','Julio'];
   }
-  heroes = [];
-  addHero(newHero1: string,newHero2: string,newHero3: string) {
-    if (newHero1 && newHero2 && newHero3) {
-      this.heroes.push(newHero1);
-      this.heroes.push(newHero2);
-      this.heroes.push(newHero3);
-      
-    }
-  }
+  heroes = ["1","2","3"];
+  
 }

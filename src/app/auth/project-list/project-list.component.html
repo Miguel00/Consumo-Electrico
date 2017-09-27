@@ -3,7 +3,7 @@
     <app-loader></app-loader>
   </div>
 </div>
-<ng-template #elseBlock>
+<div>
   <!-- <div class="margin-bottom-xs b-project-list-sorting">
     <app-sorting [data]="projects"
                  [elements]="[
@@ -49,13 +49,7 @@
     </div>  
   </div> 
   
-  <div class="row">
-      <div class="col-sm-12 margin-bottom-60">
-          <div *ngFor="let hero of heroes" class="col-sm-3">
-              {{hero}}
-          </div>
-        </div>
-  </div> 
+  
   <div class="col-md-12 margin-bottom-60">
  
     <canvas baseChart
@@ -64,7 +58,8 @@
                 [options]="lineChartOptions"
                 [chartType]="lineChartType"
                 (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
+                (chartClick)="chartClicked($event)">
+    </canvas>
   </div>
   
 <div class="b-project-list">
@@ -96,4 +91,4 @@
   </div>
 </div> -->
 <!-- <canvas id="barChart"></canvas> -->
-</ng-template>
+</div>

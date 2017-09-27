@@ -26,26 +26,26 @@
           <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav pull-right">
               <li class="leaf" >
-                <a  *ngIf="_authService.isLoggedIn()"
+                <a 
                     routerLink="/proyects"
                 title="Cursos">Home</a>
               </li>
               <li class="leaf">
-                  <a *ngIf="_authService.isLoggedIn()" 
+                  <a 
                     routerLink="/historico">Historico</a>
               </li>
-              <li class="leaf" *ngIf="_authService.isLoggedIn()" >
+              <li class="leaf" >
                 <a title="Cerrar sesión" routerLink="/gestion">Gestion</a>
               </li>
-              <li class="leaf" *ngIf="_authService.isLoggedIn()">
+              <li class="leaf">
                 <a title="Cerrar sesión" routerLink="/informe-energia">Informe de energia</a>
               </li>
-              <li class="leaf" *ngIf="_authService.isLoggedIn()">
+              <li class="leaf">
                 <a title="Cerrar sesión" routerLink="/resumen" >Resumen</a>
               </li>
-              <li class="leaf" *ngIf="_authService.isLoggedIn()">
+              <!-- <li class="leaf">
                 <a title="Cerrar sesión" (click)="logout()">Salir</a>
-              </li>
+              </li>-->
             </ul>
           </div>
         </div>
